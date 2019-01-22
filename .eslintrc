@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+    "import/named": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./app"],
+        "alias": {
+          "components": "./app/components",
+          "actions": "./app/redux/actions",
+          "reducers": "./app/redux/reducers",
+          "sagas": "./app/redux/sagas",
+          "resources": "./app/resources",
+          "utils": "./app/utils"
+        }
+      }
+    }
+  }
+}
