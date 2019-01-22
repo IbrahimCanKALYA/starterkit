@@ -2,7 +2,13 @@
 Complete starter kit for react-native projects.
 
 # editor instructions
-1. Add following lines to workspace settings for prettier, flow and eslint work
+1.Add this extensions to your editor
+```
+ESLint
+Prettier-Code formatter
+Flow Language Support
+```
+2.Add following lines to your editor workspace settings for prettier, flow and eslint work
 ```
   // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
   "editor.formatOnSave": true,
