@@ -19,7 +19,8 @@
 ; Ignore metro
 .*/node_modules/metro/.*
 
-
+[untyped]
+.*/node_modules/.*
 
 [include]
 
@@ -29,6 +30,13 @@ node_modules/react-native/flow/
 node_modules/react-native/flow-github/
 
 [options]
+module.name_mapper='components' -> '<PROJECT_ROOT>/app/components/'
+module.name_mapper='^actions/\(.*\)$' -> '<PROJECT_ROOT>/app/redux/actions/\1'
+module.name_mapper='reducers' -> '<PROJECT_ROOT>/app/redux/reducers/'
+module.name_mapper='sagas' -> '<PROJECT_ROOT>/app/redux/sagas/'
+module.name_mapper='resources' -> '<PROJECT_ROOT>/app/resources/'
+module.name_mapper='utils' -> '<PROJECT_ROOT>/app/utils/'
+
 emoji=true
 
 esproposal.optional_chaining=enable
@@ -51,7 +59,7 @@ module.system.haste.paths.whitelist=<PROJECT_ROOT>/node_modules/react-native/Lib
 
 munge_underscores=true
 
-module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
+module.name_mapper.extension='\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)' -> 'RelativeImageStub'
 
 module.file_ext=.js
 module.file_ext=.jsx

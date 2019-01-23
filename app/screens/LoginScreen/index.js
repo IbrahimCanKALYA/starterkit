@@ -9,7 +9,13 @@ import * as AuthActions from 'actions/auth';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
 
-class LoginScreen extends Component {
+type Props = any;
+type State = {
+  serviceCall: boolean,
+};
+class LoginScreen extends Component<Props, State> {
+  static defaultProps: any;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,8 +25,8 @@ class LoginScreen extends Component {
 
   emailLogin(): void {
     const params = {
-      eMail: this.emailField.getText(),
-      password: this.passwordField.getText(),
+      eMail: (this: any).emailField.getText(),
+      password: (this: any).passwordField.getText(),
     };
 
     const {
@@ -54,13 +60,13 @@ class LoginScreen extends Component {
             <Text style={styles.title}>Giriş</Text>
             <TextInputCustom
               ref={(ref) => {
-                this.emailField = ref;
+                (this: any).emailField = ref;
               }}
               placeholder="E-Mail"
             />
             <TextInputCustom
               ref={(ref) => {
-                this.passwordField = ref;
+                (this: any).passwordField = ref;
               }}
               placeholder="Şifre"
               secureTextEntry

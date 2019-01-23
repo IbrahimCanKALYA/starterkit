@@ -9,7 +9,16 @@ import { Navigate } from 'utils';
 import SwiperRow from './SwiperRow';
 import styles from './styles';
 
-class WelcomeScreen extends Component {
+type Props = any;
+
+type State = {
+  showDots: boolean,
+  swipeElements: Array<Object>,
+};
+
+class WelcomeScreen extends Component<Props, State> {
+  static defaultProps: any;
+
   constructor(props) {
     super(props);
     const {

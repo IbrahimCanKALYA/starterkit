@@ -4,8 +4,16 @@ import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
 import styles from './styles';
 
-class TextInputCustom extends Component {
-  constructor(props) {
+type Props = any;
+
+type State = {
+  text: string,
+  focused: boolean,
+};
+class TextInputCustom extends Component<Props, State> {
+  static defaultProps: any;
+
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -13,11 +21,11 @@ class TextInputCustom extends Component {
       focused: false,
     };
 
-    this.onChangeText = this.onChangeText.bind(this);
-    this.getText = this.getText.bind(this);
+    (this: any).onChangeText = this.onChangeText.bind(this);
+    (this: any).getText = this.getText.bind(this);
   }
 
-  onChangeText(text) {
+  onChangeText(text: string): void {
     const {
       props: { onChangeText },
     } = this;
@@ -25,28 +33,28 @@ class TextInputCustom extends Component {
     onChangeText(text);
   }
 
-  getText() {
+  getText(): string {
     const {
       state: { text },
     } = this;
     return text;
   }
 
-  setText(text) {
+  setText(text: string): void {
     this.setState({ text });
   }
 
-  focus() {
-    this.textInput.focus();
+  focus(): void {
+    (this: any).textInput.focus();
   }
 
-  clear() {
+  clear(): void {
     const {
       props: { onChangeText },
     } = this;
-    this.text = '';
-    onChangeText(this.text);
-    this.textInput.clear();
+    (this: any).text = '';
+    onChangeText((this: any).text);
+    (this: any).textInput.clear();
   }
 
   render() {
@@ -60,7 +68,7 @@ class TextInputCustom extends Component {
       <View style={focused ? styles.focusedItemView : styles.itemView}>
         <TextInput
           ref={(inputRef) => {
-            this.textInput = inputRef;
+            (this: any).textInput = inputRef;
           }}
           value={text}
           onChangeText={this.onChangeText}

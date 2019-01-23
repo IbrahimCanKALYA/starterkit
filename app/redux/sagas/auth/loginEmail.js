@@ -1,9 +1,10 @@
 /* @flow */
 import { take, call, put } from 'redux-saga/effects';
+import type { IOEffect } from 'redux-saga/effects';
 
 import * as authActions from 'actions/auth';
 
-export function* loginEmail() {
+export function* loginEmail(): Generator<IOEffect, void, any> {
   while (true) {
     try {
       const { eMail, password } = yield take(authActions.LOGIN_EMAIL.REQUEST); // Take every action

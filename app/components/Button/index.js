@@ -4,7 +4,11 @@ import { View, TouchableOpacity, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
 
-class Button extends Component {
+type Props = any;
+
+class Button extends Component<Props> {
+  static defaultProps: any;
+
   render() {
     const {
       props: { text, buttonStyle, buttonTextStyle },

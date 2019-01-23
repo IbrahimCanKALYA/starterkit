@@ -25,5 +25,8 @@
         }
       }
     }
+  },
+  "globals": {
+    "Generator": true
   }
 }

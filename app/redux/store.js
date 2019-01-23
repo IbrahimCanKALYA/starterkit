@@ -22,11 +22,9 @@ const store = createStore(persistedReducer, applyMiddleware(logger, sagaMiddlewa
 
 sagaMiddleware.run(sagas);
 
-
 function onRehydrate() {
   // Uygulama açıldığında geçmiş statein yüklendiği yer
   const currentState = store.getState();
-  console.disableYellowBox = true;
 
   if (currentState.auth.login) {
     // startTabBasedApp();

@@ -6,8 +6,10 @@ import { Provider } from 'react-redux';
 import WelcomeScreen from './WelcomeScreen';
 import LoginScreen from './LoginScreen';
 
+type Props = any;
+
 function reduxStoreWrapper(MyComponent, store, ...props) {
-  return () => class StoreWrapper extends Component {
+  return () => class StoreWrapper extends Component<Props> {
     render() {
       return (
         <Provider store={store}>
@@ -24,7 +26,7 @@ function reduxStoreWrapper(MyComponent, store, ...props) {
 }
 
 // registering all screens with redux...
-export default function registerScreens(store = null) {
+export default function registerScreens(store: any = null) {
   Navigation.registerComponent('WelcomeScreen', reduxStoreWrapper(WelcomeScreen, store));
   Navigation.registerComponent('LoginScreen', reduxStoreWrapper(LoginScreen, store));
 }

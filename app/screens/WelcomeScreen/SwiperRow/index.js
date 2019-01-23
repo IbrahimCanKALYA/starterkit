@@ -6,7 +6,10 @@ import propTypes from 'prop-types';
 import { Button } from 'components';
 import styles from './styles';
 
-class SwiperRow extends Component {
+type Props = any;
+class SwiperRow extends Component<Props> {
+  static defaultProps: any;
+
   render() {
     const {
       props: {
