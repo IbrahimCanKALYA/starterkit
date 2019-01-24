@@ -30,12 +30,14 @@ node_modules/react-native/flow/
 node_modules/react-native/flow-github/
 
 [options]
+module.name_mapper='app' -> '<PROJECT_ROOT>/app/'
 module.name_mapper='components' -> '<PROJECT_ROOT>/app/components/'
 module.name_mapper='^actions/\(.*\)$' -> '<PROJECT_ROOT>/app/redux/actions/\1'
 module.name_mapper='reducers' -> '<PROJECT_ROOT>/app/redux/reducers/'
 module.name_mapper='sagas' -> '<PROJECT_ROOT>/app/redux/sagas/'
 module.name_mapper='resources' -> '<PROJECT_ROOT>/app/resources/'
 module.name_mapper='utils' -> '<PROJECT_ROOT>/app/utils/'
+module.name_mapper='^services/\(.*\)$' -> '<PROJECT_ROOT>/app/services/\1'
 
 emoji=true
 

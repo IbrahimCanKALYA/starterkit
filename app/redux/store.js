@@ -27,8 +27,7 @@ function onRehydrate() {
   const currentState = store.getState();
 
   if (currentState.auth.login) {
-    // startTabBasedApp();
-    startIntroductionScreen();
+    startTabBasedApp();
   } else {
     startIntroductionScreen();
   }

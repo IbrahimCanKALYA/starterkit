@@ -23,6 +23,22 @@ class LoginScreen extends Component<Props, State> {
     };
   }
 
+  componentDidUpdate() {
+    const {
+      state: { serviceCall },
+    } = this;
+    const {
+      props: { auth },
+    } = this;
+    if (serviceCall && !auth.isLoading) {
+      if (auth.error) {
+        Alert.showInfo('Hata', auth.errorDescription);
+      } else {
+        Alert.showInfo('Bilgilendirme', 'Login Başarılı');
+      }
+    }
+  }
+
   emailLogin(): void {
     const params = {
       eMail: (this: any).emailField.getText(),

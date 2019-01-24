@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation';
+import { images } from 'resources';
 import store from './redux/store';
 import registerScreens from './screens';
-import { images } from 'resources';
 
 registerScreens(store);
 
@@ -37,15 +37,56 @@ export function startTabBasedApp() {
               children: [
                 {
                   component: {
-                    name: 'WelcomeScreen',
+                    name: 'HomeScreen',
                   },
                 },
               ],
               options: {
                 bottomTab: {
-                  text: 'Tab 1',
                   icon: images.homePageIcon,
                   testID: 'FIRST_TAB_BAR_BUTTON',
+                },
+                topBar: {
+                  visible: false,
+                  height: 0,
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: 'ProfileScreen',
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  icon: images.profileIcon,
+                  testID: 'SECOND_TAB_BAR_BUTTON',
+                },
+                topBar: {
+                  visible: false,
+                  height: 0,
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: 'MessagingScreen',
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  icon: images.messagingIcon,
+                  testID: 'THIRD_TAB_BAR_BUTTON',
                 },
                 topBar: {
                   visible: false,

@@ -16,6 +16,7 @@
       "babel-module": {
         "root": ["./app"],
         "alias": {
+          "app": "./app",
           "components": "./app/components",
           "actions": "./app/redux/actions",
           "reducers": "./app/redux/reducers",
