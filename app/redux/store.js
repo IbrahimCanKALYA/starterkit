@@ -23,8 +23,11 @@ const store = createStore(persistedReducer, applyMiddleware(logger, sagaMiddlewa
 sagaMiddleware.run(sagas);
 
 function onRehydrate() {
-  // Uygulama açıldığında geçmiş statein yüklendiği yer
+  // Getting past state from phone storage...
   const currentState = store.getState();
+
+  // $FlowFixMe
+  console.disableYellowBox = true; // eslint-disable-line
 
   if (currentState.auth.login) {
     startTabBasedApp();

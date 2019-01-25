@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { Button, TextInputCustom } from 'components';
+import { Button, TextInputCustom, Loading } from 'components';
 import { FormValidation, Alert } from 'utils';
 import * as AuthActions from 'actions/auth';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -33,8 +33,6 @@ class LoginScreen extends Component<Props, State> {
     if (serviceCall && !auth.isLoading) {
       if (auth.error) {
         Alert.showInfo('Hata', auth.errorDescription);
-      } else {
-        Alert.showInfo('Bilgilendirme', 'Login Başarılı');
       }
     }
   }
@@ -64,8 +62,12 @@ class LoginScreen extends Component<Props, State> {
   }
 
   render() {
+    const {
+      props: { auth },
+    } = this;
     return (
       <View style={styles.container}>
+        {auth.isLoading ? <Loading /> : null}
         <KeyboardAwareScrollView
           style={styles.containerView}
           automaticallyAdjustContentInsets={false}

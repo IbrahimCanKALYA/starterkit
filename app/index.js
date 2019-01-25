@@ -37,6 +37,27 @@ export function startTabBasedApp() {
               children: [
                 {
                   component: {
+                    name: 'MessagingScreen',
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  icon: images.messagingIcon,
+                  testID: 'THIRD_TAB_BAR_BUTTON',
+                },
+                topBar: {
+                  visible: false,
+                  height: 0,
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
                     name: 'HomeScreen',
                   },
                 },
@@ -66,27 +87,6 @@ export function startTabBasedApp() {
                 bottomTab: {
                   icon: images.profileIcon,
                   testID: 'SECOND_TAB_BAR_BUTTON',
-                },
-                topBar: {
-                  visible: false,
-                  height: 0,
-                },
-              },
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: 'MessagingScreen',
-                  },
-                },
-              ],
-              options: {
-                bottomTab: {
-                  icon: images.messagingIcon,
-                  testID: 'THIRD_TAB_BAR_BUTTON',
                 },
                 topBar: {
                   visible: false,
