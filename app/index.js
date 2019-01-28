@@ -1,3 +1,4 @@
+/* @flow */
 import { Navigation } from 'react-native-navigation';
 import { images } from 'resources';
 import store from './redux/store';

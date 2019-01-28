@@ -1,22 +1,25 @@
+/* @flow */
 import { Alert } from 'react-native';
 
 export default {
   showInfo: (
-    title = 'info',
-    message,
-    ok = () => {
-      console.log('OK Pressed');
+    title: string = 'info',
+    message: string,
+    ok: Function = () => {
+      // $FlowFixMe
+      console.log('OK Pressed'); // eslint-disable-line
     },
   ) => {
     Alert.alert(title, message, [{ text: 'Tamam', onPress: ok }], { cancelable: false });
   },
   confirm: (
-    title = 'info',
-    message,
-    ok = () => {
-      console.log('OK Pressed');
+    title: string = 'info',
+    message: string,
+    ok: Function = () => {
+      // $FlowFixMe
+      console.log('OK Pressed'); // eslint-disable-line
     },
-    cancel = () => {
+    cancel: Function = () => {
       'CANCEL Pressed';
     },
   ) => {
