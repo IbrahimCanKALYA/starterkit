@@ -2,6 +2,7 @@
 import { Alert } from 'react-native';
 
 export default {
+  // Shows an alert without cancel button...
   showInfo: (
     title: string = 'info',
     message: string,
@@ -12,6 +13,7 @@ export default {
   ) => {
     Alert.alert(title, message, [{ text: 'Tamam', onPress: ok }], { cancelable: false });
   },
+  // Show alert with cancel button for take a confirmation from user...
   confirm: (
     title: string = 'info',
     message: string,

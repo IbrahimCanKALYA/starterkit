@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 
-type Props = any;
+
 // For wrapping components with redux...
+type Props = any;
 function reduxStoreWrapper(MyComponent: any, store: any, ...props: any) {
   return () => class StoreWrapper extends Component<Props> {
     render() {
