@@ -1,11 +1,16 @@
 /* @flow */
-import {
-  createRequestTypes, action, REQUEST, SUCCESS, FAILURE,
-} from '../actionUtil';
 
-export const LOGIN_EMAIL = createRequestTypes('LOGIN_EMAIL');
+import { Action } from 'utils';
+
+export const LOGIN_EMAIL = Action.createRequestTypes('LOGIN_EMAIL');
 export const loginEmail = {
-  request: (eMail: string, password: string) => action(LOGIN_EMAIL[REQUEST], { eMail, password }),
-  success: () => action(LOGIN_EMAIL[SUCCESS], null),
-  failure: (error: { error: boolean, message: string }) => action(LOGIN_EMAIL[FAILURE], { error }),
+  request: (eMail: string, password: string) => {
+    Action.action(LOGIN_EMAIL[Action.REQUEST], { eMail, password });
+  },
+  success: () => {
+    Action.action(LOGIN_EMAIL[Action.SUCCESS], null);
+  },
+  failure: (error: { error: boolean, message: string }) => {
+    Action.action(LOGIN_EMAIL[Action.FAILURE], { error });
+  },
 };

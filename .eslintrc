@@ -18,6 +18,7 @@
         "alias": {
           "app": "./app",
           "components": "./app/components",
+          "store": "./app/redux/store",
           "actions": "./app/redux/actions",
           "reducers": "./app/redux/reducers",
           "sagas": "./app/redux/sagas",
@@ -29,5 +30,8 @@
   },
   "globals": {
     "Generator": true
-  }
+  },
+  "env": {
+    "jest": true
+}
 }
