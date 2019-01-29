@@ -20,6 +20,12 @@ Libraries installed to project :
 - > react-native-swiper : 1.5.14
 - > react-native-keyboard-aware-scroll-view : 0.8.0
 
+## Firebase Installation
+
+>**Android**
+
+- Put your google-services.json under android/app/
+
 ## Coding Style
 
 Project configurated coding with Airbnb standarts and **Eslint** - **Prettier** installed and configured.
