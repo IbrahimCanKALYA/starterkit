@@ -13,7 +13,7 @@ Flow Language Support// Support us to static type checking with react-native...
 markdownlint// Linter for .md descriptions which is written inside of the project...
 ```
 
-2.Add following lines to your editor workspace settings for prettier, flow and eslint work.(__If you are using vscode skip this step because workspace setting for vscode included inside of the repository__)
+2.Add following lines to your editor workspace settings for prettier,      flow and eslint work.(__If you are using vscode skip this step because workspace setting for vscode included inside of the repository__)
 
 ```js
 
