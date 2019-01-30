@@ -4,7 +4,7 @@ Complete starter kit for react-native projects.
 
 ## Description
 
-This repository created for initilazing react-native apps fast as we can and keep our focus on the coding. Project includes the requirements for almost all react-native projects. Also i used markdown files for petite descriptions of components and screens. Throughout the project i used yarn and i encourage you to use yarn.
+This repository created for initializing react-native apps fast as we can and keep our focus on the coding. Project includes the requirements for almost all react-native projects. Also i used markdown files for petite descriptions of components and screens. Throughout the project i used yarn and i encourage you to use yarn.
 
 ## Libraries
 
