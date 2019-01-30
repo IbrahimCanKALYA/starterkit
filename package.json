@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "run-android": "start cmd.exe /k yarn start -- --reset-cache && cd ./android && ./gradlew clean && ./gradlew app:assembleDebug && ./gradlew installDebug && cd .. && adb shell monkey -p com.starterkit -c android.intent.category.LAUNCHER 1 ",
+    "run-android": "cd ./android && ./gradlew clean && ./gradlew app:assembleDebug && start cmd.exe /k yarn start -- --reset-cache && ./gradlew installDebug && cd .. && adb shell monkey -p com.starterkit -c android.intent.category.LAUNCHER 1 ",
     "flow-start": "flow start",
     "flow-stop": "flow stop",
     "flow-status": "flow status",
