@@ -76,6 +76,6 @@ markdownlint// Linter for .md descriptions which is written inside of the projec
 - [ ] react-navigation support
 - [ ] react-native-firebase notificaton utility functions
 
-## LICENCE
+## License
 
-MIT
+[MIT](https://opensource.org/licenses/mit-license.html)
