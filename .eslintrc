@@ -9,7 +9,8 @@
     "react/forbid-prop-types": 0,
     "global-require": 0,
     "import/prefer-default-export": 0,
-    "import/named": 0
+    "import/named": 0,
+    "max-len": 0
   },
   "settings": {
     "import/resolver": {
@@ -18,6 +19,7 @@
         "alias": {
           "app": "./app",
           "components": "./app/components",
+          "store": "./app/redux/store",
           "actions": "./app/redux/actions",
           "reducers": "./app/redux/reducers",
           "sagas": "./app/redux/sagas",
@@ -29,5 +31,8 @@
   },
   "globals": {
     "Generator": true
-  }
+  },
+  "env": {
+    "jest": true
+}
 }

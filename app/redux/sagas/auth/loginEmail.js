@@ -5,12 +5,10 @@ import { loginEmail as loginEmailService } from 'services/auth';
 import * as authActions from 'actions/auth';
 import { startTabBasedApp } from '../../../index';
 
-
 export function* loginEmail(): Generator<IOEffect, void, any> {
   while (true) {
     try {
       const { eMail, password } = yield take(authActions.LOGIN_EMAIL.REQUEST); // Take every action
-
       yield call(loginEmailService, eMail, password);
 
       yield put(authActions.loginEmail.success());

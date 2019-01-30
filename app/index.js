@@ -1,6 +1,7 @@
+/* @flow */
 import { Navigation } from 'react-native-navigation';
 import { images } from 'resources';
-import store from './redux/store';
+import store from 'store';
 import registerScreens from './screens';
 
 registerScreens(store);
