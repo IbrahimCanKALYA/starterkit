@@ -10,7 +10,7 @@
 
 ## Props
 
-- componentId(String) : Id of screen which passed by navigation automatically. Used for page navigations.
+- navigator(any) : Navigator class which passed by navigation automatically. Used for page navigations.
 
 ## NavigateTo
 

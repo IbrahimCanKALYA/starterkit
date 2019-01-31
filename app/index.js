@@ -1,103 +1,42 @@
 /* @flow */
-import { Navigation } from 'react-native-navigation';
-import { images } from 'resources';
-import store from 'store';
-import registerScreens from './screens';
+// import { images } from 'resources';
+import {
+  createStackNavigator,
+  createAppContainer,
+  createBottomTabNavigator,
+} from 'react-navigation';
+// import store from 'store';
+import {
+  WelcomeScreen,
+  LoginScreen,
+  HomeScreen,
+  ProfileScreen,
+  MessagingScreen,
+} from './screens';
 
-registerScreens(store);
+let navigation; // eslint-disable-line
 
 export function startIntroductionScreen() {
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              name: 'WelcomeScreen',
-            },
-          },
-        ],
-        options: {
-          topBar: {
-            visible: false,
-            height: 0,
-          },
-        },
-      },
+  const AppNavigator = createStackNavigator({
+    WelcomeScreen: {
+      screen: WelcomeScreen,
+    },
+    LoginScreen: {
+      screen: LoginScreen,
     },
   });
+
+  navigation = createAppContainer(AppNavigator);
 }
 
 export function startTabBasedApp() {
-  Navigation.setRoot({
-    root: {
-      bottomTabs: {
-        children: [
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: 'MessagingScreen',
-                  },
-                },
-              ],
-              options: {
-                bottomTab: {
-                  icon: images.messagingIcon,
-                  testID: 'THIRD_TAB_BAR_BUTTON',
-                },
-                topBar: {
-                  visible: false,
-                  height: 0,
-                },
-              },
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: 'HomeScreen',
-                  },
-                },
-              ],
-              options: {
-                bottomTab: {
-                  icon: images.homePageIcon,
-                  testID: 'FIRST_TAB_BAR_BUTTON',
-                },
-                topBar: {
-                  visible: false,
-                  height: 0,
-                },
-              },
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: 'ProfileScreen',
-                  },
-                },
-              ],
-              options: {
-                bottomTab: {
-                  icon: images.profileIcon,
-                  testID: 'SECOND_TAB_BAR_BUTTON',
-                },
-                topBar: {
-                  visible: false,
-                  height: 0,
-                },
-              },
-            },
-          },
-        ],
-      },
-    },
+  const TabNavigator = createBottomTabNavigator({
+    HomeScreen,
+    ProfileScreen,
+    MessagingScreen,
   });
+
+  navigation = createAppContainer(TabNavigator);
 }
+
+export default navigation;

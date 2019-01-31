@@ -22,7 +22,7 @@ class WelcomeScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     const {
-      props: { componentId },
+      props: { navigator },
     } = this;
     this.state = {
       swipeElements: [
@@ -34,7 +34,7 @@ class WelcomeScreen extends Component<Props, State> {
           button: true,
           buttonText: 'Start',
           onPressButton: () => {
-            Navigate.push(componentId, 'LoginScreen');
+            Navigate.push(navigator, 'LoginScreen');
           },
         },
       ],
@@ -75,7 +75,7 @@ class WelcomeScreen extends Component<Props, State> {
 }
 
 WelcomeScreen.propTypes = {
-  componentId: PropTypes.string.isRequired,
+  navigator: PropTypes.any.isRequired,
 };
 WelcomeScreen.defaultProps = {};
 
