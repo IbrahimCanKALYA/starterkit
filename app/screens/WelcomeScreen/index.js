@@ -34,7 +34,7 @@ class WelcomeScreen extends Component<Props, State> {
           button: true,
           buttonText: 'Start',
           onPressButton: () => {
-            Navigate.push(navigator, 'LoginScreen');
+            Navigate.navigate(navigator, 'LoginScreen');
           },
         },
       ],

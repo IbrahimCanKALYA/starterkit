@@ -14,9 +14,9 @@ import {
   MessagingScreen,
 } from './screens';
 
-let navigation; // eslint-disable-line
+let Navigation = null; // eslint-disable-line
 
-export function startIntroductionScreen() {
+function startIntroductionScreen() {
   const AppNavigator = createStackNavigator({
     WelcomeScreen: {
       screen: WelcomeScreen,
@@ -26,17 +26,17 @@ export function startIntroductionScreen() {
     },
   });
 
-  navigation = createAppContainer(AppNavigator);
+  Navigation = createAppContainer(AppNavigator);
 }
 
-export function startTabBasedApp() {
+function startTabBasedApp() {
   const TabNavigator = createBottomTabNavigator({
     HomeScreen,
     ProfileScreen,
     MessagingScreen,
   });
 
-  navigation = createAppContainer(TabNavigator);
+  Navigation = createAppContainer(TabNavigator);
 }
 
-export default navigation;
+export { Navigation, startIntroductionScreen, startTabBasedApp };

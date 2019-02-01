@@ -1,7 +1,7 @@
 import 'react-native';
 import renderer from 'react-test-renderer';
 import { Redux } from 'utils';
-import store from 'store';
+import { store } from 'store';
 import MessagingScreen from '../index';
 
 test('MessagingScreen renders correctly', () => {

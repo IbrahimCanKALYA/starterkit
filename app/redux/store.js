@@ -18,7 +18,10 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
-const store = createStore(persistedReducer, applyMiddleware(sagaMiddleware, logger));
+const store = createStore(
+  persistedReducer,
+  applyMiddleware(sagaMiddleware, logger),
+);
 
 sagaMiddleware.run(sagas);
 
@@ -36,6 +39,6 @@ function onRehydrate() {
   }
 }
 
-persistStore(store, {}, onRehydrate);
+const persistor = persistStore(store, {}, onRehydrate);
 
-export default store;
+export { store, persistor };

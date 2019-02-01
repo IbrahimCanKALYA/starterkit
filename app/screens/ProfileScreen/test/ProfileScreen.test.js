@@ -1,7 +1,7 @@
 import 'react-native';
 import renderer from 'react-test-renderer';
 import { Redux } from 'utils';
-import store from 'store';
+import { store } from 'store';
 import ProfileScreen from '../index';
 
 test('ProfileScreen renders correctly', () => {
