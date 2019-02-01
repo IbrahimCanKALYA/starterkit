@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { Button, TextInputCustom, Loading } from 'components';
-import { FormValidation, Alert } from 'utils';
+import { FormValidation, Alert, Navigate } from 'utils';
 import * as AuthActions from 'actions/auth';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
@@ -28,11 +28,13 @@ class LoginScreen extends Component<Props, State> {
       state: { serviceCall },
     } = this;
     const {
-      props: { auth },
+      props: { auth, navigation },
     } = this;
     if (serviceCall && !auth.isLoading) {
       if (auth.error) {
         Alert.showInfo('Hata', auth.errorDescription);
+      } else {
+        Navigate.navigate(navigation, 'Tab');
       }
     }
   }

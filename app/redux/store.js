@@ -6,7 +6,6 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import sagas from 'sagas';
-import { startIntroductionScreen, startTabBasedApp } from '../index';
 import reducers from './reducerCombiner';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -25,20 +24,9 @@ const store = createStore(
 
 sagaMiddleware.run(sagas);
 
-function onRehydrate() {
-  // Getting past state from phone storage...
-  const currentState = store.getState();
+const persistor = persistStore(store);
 
-  // $FlowFixMe
-  console.disableYellowBox = true; // eslint-disable-line
-
-  if (currentState.auth.login) {
-    startTabBasedApp();
-  } else {
-    startIntroductionScreen();
-  }
-}
-
-const persistor = persistStore(store, {}, onRehydrate);
+// $FlowFixMe
+console.disableYellowBox = true; // eslint-disable-line
 
 export { store, persistor };

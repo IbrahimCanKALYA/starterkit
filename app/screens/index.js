@@ -4,6 +4,7 @@ import LoginScreen from './LoginScreen';
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
 import MessagingScreen from './MessagingScreen';
+import SplashScreen from './SplashScreen';
 
 export {
   WelcomeScreen,
@@ -11,4 +12,5 @@ export {
   HomeScreen,
   ProfileScreen,
   MessagingScreen,
+  SplashScreen,
 };

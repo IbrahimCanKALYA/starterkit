@@ -1,12 +1,12 @@
 /* @flow */
 
 // Push a new layout into this screen's navigation stack...
-const navigate = (navigator: any, screenName: string, passProps: any): void => {
-  navigator.navigate(screenName);
+const navigate = (navigation: any, screenName: string, passProps: any): void => {
+  navigation.navigate(screenName);
 };
 
-const push = (navigator: any, screenName: string, passProps: any): void => {
-  navigator.push(screenName);
+const push = (navigation: any, screenName: string, passProps: any): void => {
+  navigation.push(screenName);
 };
 
 module.exports = {

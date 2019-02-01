@@ -1,42 +1,55 @@
 /* @flow */
-// import { images } from 'resources';
 import {
   createStackNavigator,
   createAppContainer,
   createBottomTabNavigator,
+  createSwitchNavigator,
 } from 'react-navigation';
-// import store from 'store';
 import {
   WelcomeScreen,
   LoginScreen,
   HomeScreen,
   ProfileScreen,
   MessagingScreen,
+  SplashScreen,
 } from './screens';
 
-let Navigation = null; // eslint-disable-line
-
-function startIntroductionScreen() {
-  const AppNavigator = createStackNavigator({
-    WelcomeScreen: {
-      screen: WelcomeScreen,
+const StackNavigator = createStackNavigator({
+  WelcomeScreen: {
+    screen: WelcomeScreen,
+    navigationOptions: {
+      header: null,
     },
-    LoginScreen: {
-      screen: LoginScreen,
+  },
+  LoginScreen: {
+    screen: LoginScreen,
+    navigationOptions: {
+      header: null,
     },
-  });
+  },
+});
 
-  Navigation = createAppContainer(AppNavigator);
-}
+const TabNavigator = createBottomTabNavigator({
+  HomeScreen: {
+    screen: HomeScreen,
+  },
+  ProfileScreen: {
+    screen: ProfileScreen,
+  },
+  MessagingScreen: {
+    screen: MessagingScreen,
+  },
+});
 
-function startTabBasedApp() {
-  const TabNavigator = createBottomTabNavigator({
-    HomeScreen,
-    ProfileScreen,
-    MessagingScreen,
-  });
-
-  Navigation = createAppContainer(TabNavigator);
-}
-
-export { Navigation, startIntroductionScreen, startTabBasedApp };
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      Splash: SplashScreen,
+      Stack: StackNavigator,
+      Tab: TabNavigator,
+    },
+    {
+      initialRouteName: 'Splash',
+    },
+  ),
+);

@@ -3,7 +3,6 @@ import { take, call, put } from 'redux-saga/effects';
 import type { IOEffect } from 'redux-saga/effects';
 import { loginEmail as loginEmailService } from 'services/auth';
 import * as authActions from 'actions/auth';
-import { startTabBasedApp } from '../../../index';
 
 export function* loginEmail(): Generator<IOEffect, void, any> {
   while (true) {
@@ -12,7 +11,6 @@ export function* loginEmail(): Generator<IOEffect, void, any> {
       yield call(loginEmailService, eMail, password);
 
       yield put(authActions.loginEmail.success());
-      startTabBasedApp();
     } catch (errorMessage) {
       // Show info
       yield put(authActions.loginEmail.failure(errorMessage));
