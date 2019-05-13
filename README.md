@@ -73,7 +73,7 @@ markdownlint// Linter for .md descriptions which is written inside of the projec
 - [x] Adding simple Jest test
 - [x] Adding markdown descriptions to components and screens
 - [ ] Cucumber scenario & Appium test for login scenario
-- [ ] react-navigation support
+- [x] react-navigation support
 - [ ] react-native-firebase notificaton utility functions
 
 ## License
