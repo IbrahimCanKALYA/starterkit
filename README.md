@@ -4,27 +4,35 @@ Complete starter kit for react-native projects.
 
 ## Description
 
-This repository created for initilazing react-native apps fast as we can and keep our focus on the coding. Project includes the requirements for almost all react-native projects. Also i used markdown files for petite descriptions of components and screens. Throughout the project i used yarn and i encourage you to use yarn.
+This repository created for initilazing react-native apps fast as we can and keep our focus on the coding. Project includes the requirements for almost all react-native projects. Also i used markdown files for petite descriptions of components and screens. Throughout the project i used yarn and i encourage you to use yarn. React-Native version: 0.59.10
 
 ## Libraries
 
 Libraries installed to project :
 
-- > react-native-navigation : 2.7.0
-- > react-native-firebase : 5.2.1
+- > react-native-navigation : 2.22.3
+- > react-native-firebase : 5.5.4
 - > redux : 4.0.1
-- > react-redux : 6.0.0
-- > redux-saga : 0.16.2
+- > react-redux : 7.1.0
+- > redux-saga : 1.0.3
 - > redux-persist : 5.10.0
 - > redux-logger : 3.0.6
 - > react-native-swiper : 1.5.14
 - > react-native-keyboard-aware-scroll-view : 0.8.0
+
+## Setup
+
+You don't need to do spesific installation or configuration. Change project name to your project and follow instructions for firebase.
 
 ## Firebase Installation
 
 >**Android**
 
 - Put your google-services.json under android/app/
+
+>**iOS**
+
+- Put your GoogleService-Info.plist under ios/[YOUR_PROJECT_NAME]/
 
 ## Coding Style
 
