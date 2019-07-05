@@ -21,7 +21,6 @@ const styles = {
   textInputStyle: {
     textAlign: 'left',
     fontSize: 17,
-    fontFamily: 'Segoe UI',
     color: '#9A9A9A',
   },
 };

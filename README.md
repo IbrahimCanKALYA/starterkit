@@ -69,7 +69,7 @@ markdownlint// Linter for .md descriptions which is written inside of the projec
 ## ToDo
 
 - [x] Android Support
-- [ ] iOS Support
+- [x] iOS Support
 - [x] Adding simple Jest test
 - [x] Adding markdown descriptions to components and screens
 - [ ] Cucumber scenario & Appium test for login scenario

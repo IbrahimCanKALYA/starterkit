@@ -17,7 +17,6 @@ const styles = {
   title: {
     color: '#19769F',
     fontSize: 30,
-    fontFamily: 'Gotham Rounded',
     marginTop: screenHeight / 30,
     marginBottom: screenHeight / 40,
   },

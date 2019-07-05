@@ -5,9 +5,6 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage;
-import io.invertase.firebase.database.RNFirebaseDatabasePackage;
-import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
-import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -21,13 +18,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends NavigationApplication {
-      
+
   @Override
   protected ReactGateway createReactGateway() {
     ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
       @Override
       protected String getJSMainModuleName() {
-        return "index";
+           return "index";
       }
     };
     return new ReactGateway(this, isDebug(), host);
@@ -42,12 +39,9 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
-      // eg. new VectorIconsPackage()
-      new RNFirebasePackage(),
-      new RNFirebaseAuthPackage(),
-      new RNFirebaseDatabasePackage(),
-      new RNFirebaseMessagingPackage(),
-      new RNFirebaseNotificationsPackage()
+    // eg. new VectorIconsPackage()
+        new RNFirebasePackage(),
+        new RNFirebaseAuthPackage()
     );
   }
 
