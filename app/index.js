@@ -1,6 +1,7 @@
 /* @flow */
 import { Navigation } from 'react-native-navigation';
 import { images } from 'resources';
+// eslint-disable-next-line
 import store from 'store';
 import registerScreens from './screens';
 
