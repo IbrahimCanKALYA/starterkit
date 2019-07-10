@@ -10,7 +10,7 @@ class HomeScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>HomeScreen</Text>
+      <Text>HomeScreen</Text>
       </View>
     );
   }

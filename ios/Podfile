@@ -7,6 +7,7 @@ target 'starterkit' do
   # Pods for starterkit
   pod 'Firebase/Core', '~> 6.3.0'
   pod 'Firebase/Auth', '~> 6.3.0'
+  pod 'Firebase/Messaging', '~> 6.3.0'
 
   target 'starterkitTests' do
     inherit! :search_paths
