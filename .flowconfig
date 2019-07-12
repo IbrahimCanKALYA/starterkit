@@ -19,6 +19,9 @@
 ; Ignore metro
 .*/node_modules/metro/.*
 
+; Ignore duplicate for internal Facebook repo
+.*/Libraries/Utilities/HMRLoadingView.js
+
 [untyped]
 .*/node_modules/.*
 
