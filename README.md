@@ -6,7 +6,7 @@ Complete starter kit for react-native projects.
 
 You can access the starterkit builded with react-native-navigation via this link:
 
-[React-Native-Navigation](https://github.com/IbrahimCanKALYA/reactNativeBoilerplate)
+[React-Navigation](https://github.com/IbrahimCanKALYA/reactNativeBoilerplate)
 
 ## Description
 
