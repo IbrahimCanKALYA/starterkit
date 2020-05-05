@@ -2,6 +2,12 @@
 
 Complete starter kit for react-native projects.
 
+## React-Navigation
+
+You can access the starterkit builded with react-native-navigation via this link:
+
+[React-Native-Navigation](https://github.com/IbrahimCanKALYA/reactNativeBoilerplate)
+
 ## Description
 
 This repository created for initilazing react-native apps fast as we can and keep our focus on the coding. Project includes the requirements for almost all react-native projects. Also i used markdown files for petite descriptions of components and screens. Throughout the project i used yarn and i encourage you to use yarn. React-Native version: 0.59.10
@@ -81,7 +87,6 @@ markdownlint// Linter for .md descriptions which is written inside of the projec
 - [x] Adding simple Jest test
 - [x] Adding markdown descriptions to components and screens
 - [ ] Cucumber scenario & Appium test for login scenario
-- [x] react-navigation support (At branch react-navigation)
 - [ ] react-native-firebase notificaton utility functions
 
 ## License
